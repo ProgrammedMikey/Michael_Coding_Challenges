@@ -5,7 +5,7 @@
 
 ### What language do I code in?
 I decided to go with nodejs and express. 
-Make sure you have node installed then when inside the folder api_challenge you can run: npm start
+Make sure you have node installed then when inside the folder api_challenge you can run: npm install and  npm start
 
 Once running you can load up Postman or Insomnia and test the routes 
 
