@@ -1,6 +1,5 @@
 require('../models/db');
 const ParentTree = require('../models/parent_tree')
-const ChildTree = require('../models/child_tree')
 
 exports.listTree = async(req, res) => {
     try {
