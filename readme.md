@@ -1,8 +1,40 @@
-Congratulations! You've made it to the project stage of our interview process.
-There are 2 projects included in this repository, which you can learn about under the api_challenge and minesweeper directories. To help make this process as realistic as possible, please follow the below steps:
 
-- Create a new project with an empty repository on Github.
-- For each project, open the directory and view additional instructions in its README.
-- Finally, share your repository with `@jalford5` and `@jasonlynx` with Admin access so we can review and share with additional team members as needed.
+# Michaels Coding Challenges
 
-If you have any questions or require more time to complete these challenges, don't hesitate to reach out.
+### API Challenge
+
+```
+cd api_challenge
+```
+
+Must have node installed then when inside the folder api_challenge you can run: 
+
+Configure the database with a mongodb connection in a .env file
+
+```
+MONGODB_URI=mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
+```
+
+```
+npm i
+```
+
+
+```
+npm start
+```
+Once running you can load up Postman or Insomnia and test the routes 
+
+`GET /api/tree`
+`POST /api/tree/` 
+
+
+### Minesweeper Challenge
+
+```
+cd minesweeper
+```
+
+```
+ruby minesweeper_test.rb
+```

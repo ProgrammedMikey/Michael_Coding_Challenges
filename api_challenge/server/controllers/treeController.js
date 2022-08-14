@@ -1,4 +1,5 @@
 require('../models/db');
+const { db } = require('../models/parent_tree');
 const ParentTree = require('../models/parent_tree')
 
 exports.listTree = async(req, res) => {
@@ -13,7 +14,10 @@ exports.listTree = async(req, res) => {
 exports.insertTree = async(req, res) => {
     const parentID = req.body.parent;
 
-    await ParentTree.create({ label: req.body.label });
+    const {savedDoc} = await ParentTree.create({ label: req.body.label });
+    if (!savedDoc) {
+        throw new Error("The document label is a duplicate.")
+    }
 
     const filterChild = { label: req.body.label };
     const filterParent = { _id: req.body.parent };
@@ -26,7 +30,6 @@ exports.insertTree = async(req, res) => {
         await ParentTree.updateOne(filterParent, { $push: updateChildren });
         
     }else {
-
         const getRoot = { label: "root" };
 
         if (req.body.label !== "root"){

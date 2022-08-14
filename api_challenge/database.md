@@ -2,7 +2,7 @@
 # Michael Da Silva API Challenge
 
 
-Data schema of choice used here is Mongodb and Mongoose
+Data schema is in Mongodb and Mongoose
 
 ```
 const ParentSchema = new mongoose.Schema({

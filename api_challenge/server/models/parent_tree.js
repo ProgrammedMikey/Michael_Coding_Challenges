@@ -3,6 +3,7 @@ const mongoose = require("mongoose"); //import mongoose
 const ParentSchema = new mongoose.Schema({
     label: {
         type:  String,
+        index: true,
         required: true
       },
       children:  [{ 

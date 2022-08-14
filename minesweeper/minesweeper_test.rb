@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require_relative 'minesweeper'
 
 class MinesweeperTest < Minitest::Test
+  def skip ; end
   def test_transform1
     inp = ['+------+', 
             '| *  * |', 
